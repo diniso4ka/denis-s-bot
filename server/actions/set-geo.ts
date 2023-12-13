@@ -10,5 +10,6 @@ export const SetGeoAction = async (msg: IMessage)=>{
     if(msg.location){
         console.info(msg.location)
         bot.sendMessage(msg.chat.id, `Ваши координаты: latitude: ${msg.location.latitude}, longitude: ${msg.location.longitude}`)
+        bot.sendMessage(msg.chat.id, `WIP`)
     }
 }

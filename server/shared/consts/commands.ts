@@ -14,9 +14,8 @@ export const setGeoMenuItem = {
 }
 
 
-
 export const MENU = [
     startMenuItem,
     manorLordTimerMenuItem,
-    setGeoMenuItem
+    setGeoMenuItem,
 ]

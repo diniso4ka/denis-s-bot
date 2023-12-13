@@ -1,0 +1,1 @@
+export const USERS_WITH_PERMISSIONS = ['penaplast3104']
