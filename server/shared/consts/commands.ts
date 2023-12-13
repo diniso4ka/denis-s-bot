@@ -13,9 +13,15 @@ export const setGeoMenuItem = {
     command: '/set_geo'
 }
 
+export const setTimeWeatherMessage = {
+    description: 'Установить время сообщения прогноза погоды',
+    command: '/set_time_weather_message'
+}
+
 
 export const MENU = [
     startMenuItem,
     manorLordTimerMenuItem,
     setGeoMenuItem,
+    setTimeWeatherMessage
 ]

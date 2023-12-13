@@ -4,6 +4,7 @@ import {ManorLordsTimerAction} from "./actions/manor-lords-timer";
 import {StartAction} from "./actions/start";
 import {SetGeoAction} from "./actions/set-geo";
 import {CheckPermissionAction} from "./actions/check-permission";
+import {SetTimeWeatherMessageAction} from "./actions/set-time-weather-message";
 
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config();
@@ -25,6 +26,7 @@ bot.on('text', async (msg: IMessage) => {
         await StartAction(msg)
         await ManorLordsTimerAction(msg)
         await SetGeoAction(msg)
+        await SetTimeWeatherMessageAction(msg)
     }catch (err){
         console.log(err)
     }
