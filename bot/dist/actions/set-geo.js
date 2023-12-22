@@ -1,0 +1,26 @@
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.setGeoAction = void 0;
+const index_1 = require("../index");
+const commands_1 = require("../shared/consts/commands");
+const setGeoAction = (msg) => __awaiter(void 0, void 0, void 0, function* () {
+    if (msg.text === commands_1.setGeoMenuItem.command) {
+        index_1.bot.sendMessage(msg.chat.id, 'Отправьте вашу геолокацию');
+    }
+    if (msg.location) {
+        console.info(msg.location);
+        index_1.bot.sendMessage(msg.chat.id, `Ваши координаты: latitude: ${msg.location.latitude}, longitude: ${msg.location.longitude}`);
+        index_1.bot.sendMessage(msg.chat.id, `WIP`);
+    }
+});
+exports.setGeoAction = setGeoAction;
+//# sourceMappingURL=set-geo.js.map
